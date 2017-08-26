@@ -67,7 +67,7 @@ export default Component.extend({
 
         blogIcon = blogIcon.replace(subdirRegExp, '');
 
-        iconUrl = this.get('ghostPaths.url').join(this.get('config.blogUrl'), blogIcon).replace(/\/$/, '');
+        iconUrl = blogIcon;
         iconUrl += `?t=${(new Date()).valueOf()}`;
 
         this.set('iconStyle', htmlSafe(`background-image: url(${iconUrl})`));
